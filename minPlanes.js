@@ -25,7 +25,7 @@ function minPlanes(fuelArr){
     let i = 1;
     for (i = 1; i < n; i++) {
         // Check if we have reached the end of the Array
-        if (i >= n - 1){
+        if (i === n - 1){
             return planes;
         }
 
@@ -36,7 +36,7 @@ function minPlanes(fuelArr){
         step--;
 
         // If no further steps left
-        if (step == 0) {
+        if (step === 0) {
             // we must have used a planes
             planes++;
 
@@ -56,5 +56,5 @@ function minPlanes(fuelArr){
 }
 
 
- let ans = minPlanes([0]);
+ let ans = minPlanes([1,2,3,4]);
  console.log(ans);
